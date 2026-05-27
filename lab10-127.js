@@ -1,10 +1,10 @@
 const imgs = {
-    campus: ["images/校门.jpg","images/教学楼.jpg","images/操场.jpg","images/花园.jpg","images/林荫.jpg"],
-    tech: ["images/建筑.jpg","images/教室.jpg","images/借阅室.jpg","images/体育馆.jpg","images/校史馆.jpg"],
-    yantai: ["images/粉云映湖.jpg","images/湖景.jpg","images/晚霞.jpg","images/喷泉.jpg","images/夜景.jpg"]
+    campus: ["校门.jpg","教学楼.jpg","操场.jpg","花园.jpg","林荫.jpg"],
+    tech: ["建筑.jpg","教室.jpg","借阅室.jpg","体育馆.jpg","校史馆.jpg"],
+    yantai: ["粉云映湖.jpg","湖景.jpg","晚霞.jpg","喷泉.jpg","夜景.jpg"]
 };
 
-// 插入5张图片
+// 插入5张图片（注意去掉 images/）
 document.querySelector("#s1 .swiper-wrap").innerHTML = imgs.campus.map(i=>`<div class="swiper-item"><img src="${i}"></div>`).join("");
 document.querySelector("#s2 .swiper-wrap").innerHTML = imgs.tech.map(i=>`<div class="swiper-item"><img src="${i}"></div>`).join("");
 document.querySelector("#s3 .swiper-wrap").innerHTML = imgs.yantai.map(i=>`<div class="swiper-item"><img src="${i}"></div>`).join("");
@@ -12,7 +12,6 @@ document.querySelector("#s3 .swiper-wrap").innerHTML = imgs.yantai.map(i=>`<div 
 const swipers = document.querySelectorAll('.swiper');
 let direction = true;
 
-// 30秒切换一次滚动方向
 setInterval(() => {
     direction = !direction;
 }, 30000);
